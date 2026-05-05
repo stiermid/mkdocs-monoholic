@@ -1,4 +1,6 @@
-# About
+---
+title: About
+---
 
 A minimal, monochrome dark theme for MkDocs. Ported from the Jekyll monoholic theme.
 

@@ -36,14 +36,16 @@
             </ul>
           </section>
           {% elif not item.active %}
-          <ul class="post-list">
-            <li>
-              <a href="{{ item.url | url }}">{{ item.title }}</a>
-              {% if item.meta and item.meta.date %}
-              <span class="post-meta">* {{ item.meta.date }}</span>
-              {% endif %}
-            </li>
-          </ul>
+          <section>
+            <div class="section-title">// {{ item.title }} //</div>
+            {% if item.content %}
+            {{ item.content }}
+            {% else %}
+            <ul class="post-list">
+              <li><a href="{{ item.url | url }}">{{ item.title }}</a></li>
+            </ul>
+            {% endif %}
+          </section>
           {% endif %}
         {% endfor %}
 
