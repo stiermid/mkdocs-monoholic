@@ -27,10 +27,10 @@
             <ul class="post-list">
               {% for child in item.children %}
               <li>
-                <a href="{{ child.url | url }}">{{ child.title }}</a>
                 {% if child.meta and child.meta.date %}
                 <span class="post-meta">* {{ child.meta.date }}</span>
                 {% endif %}
+                <a href="{{ child.url | url }}">{{ child.title }}</a>
               </li>
               {% endfor %}
             </ul>
