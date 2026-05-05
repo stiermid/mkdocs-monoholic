@@ -1,0 +1,182 @@
+:root {
+  --bg-color: #030303;
+  --text-color: #e0e0e0;
+  --meta-color: #888888;
+  --border-color: #222222;
+  --font-family: "JetBrains Mono", monospace;
+  --font-size-base: 16px;
+  --content-width: 680px;
+
+  --space-xs: 0.4rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.images-monochrome img {
+  filter: grayscale(1);
+}
+
+pre,
+code {
+  font-family: var(--font-family);
+}
+
+/* Code blocks — inverted */
+pre {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  overflow-x: auto;
+  white-space: pre-wrap;
+  padding: var(--space-md);
+}
+
+/* Inline code */
+code {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  padding: 0.1em 0.3em;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* MkDocs wraps fenced code in .highlight > pre */
+.highlight {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  overflow-x: auto;
+  padding: var(--space-md);
+}
+
+.highlight pre {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid var(--meta-color);
+  padding: var(--space-xs);
+}
+
+/* Blockquotes */
+blockquote {
+  font-style: italic;
+  border-left: 1px solid var(--border-color);
+  padding: var(--space-md);
+  margin: 0;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* Layout */
+.wrapper {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-3xl) var(--space-xl);
+}
+
+/* Header */
+.site-header {
+  margin: var(--space-2xl) 0;
+}
+
+.site-title {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+/* Navigation sections */
+.section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: var(--space-lg);
+}
+
+section {
+  margin-bottom: var(--space-xl);
+}
+
+/* Post list */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-list li {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+/* Post meta (dates, etc.) */
+.post-meta {
+  color: var(--meta-color);
+}
+
+/* Post/page header row (back link + date) */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-lg);
+}
+
+/* Footer */
+.site-footer {
+  padding-top: var(--space-xl);
+  font-size: 0.85rem;
+  color: var(--meta-color);
+}
+
+.footer-col {
+  display: flex;
+  justify-content: space-between;
+}

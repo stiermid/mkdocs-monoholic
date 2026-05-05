@@ -1,0 +1,19 @@
+site_name: monoholic
+docs_dir: docs
+
+theme:
+  name: monoholic
+  monochrome_images: true
+  footer: true
+  back: "Back"
+  date_format: "%Y-%m-%d"
+
+# extra:
+#   goatcounter: mycode
+
+nav:
+  - Home: index.md
+  - Writing:
+    - Hello World: posts/hello-world.md
+    - On Minimal Themes: posts/on-minimal-themes.md
+  - About: about.md
