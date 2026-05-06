@@ -13,9 +13,11 @@
 <body{% if config.theme.get('monochrome_images', true) %} class="images-monochrome"{% endif %}>
   <div class="wrapper">
 
+    {% if page.is_homepage %}
     <header class="site-header">
       <a href="{{ base_url }}" class="site-title">{{ config.site_name }}</a>
     </header>
+    {% endif %}
 
     <main>
       {% if page.is_homepage %}
